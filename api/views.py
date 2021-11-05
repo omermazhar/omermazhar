@@ -1,12 +1,8 @@
-from django.shortcuts import render
-
-from rest_framework import viewsets
 from .serializers import HeroSerializer
 from .models import Hero
 from django.views.generic import ListView
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
 
 class HeroViewSet(ListView):
     @api_view(['DELETE'])
